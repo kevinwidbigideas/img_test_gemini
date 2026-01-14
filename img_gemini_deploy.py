@@ -2,11 +2,11 @@
 import os
 from PIL import Image
 import google.genai as genai
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import streamlit as st
 
 
-load_dotenv()
+# load_dotenv()
 
 # 1. 클라이언트 생성 (API 키 설정)
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
@@ -59,4 +59,5 @@ if uploaded_file:
 # -6) 결과 출력하기 : st.write / st.code
         st.header('이거지~')
         st.code(response)
+
 
