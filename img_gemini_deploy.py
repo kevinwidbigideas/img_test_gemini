@@ -27,7 +27,8 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 # -1) model 선택하기 : st.sidebar / st.selectbox
-st.title('인종 :red[~~차별~~]분류기 - Gemini')
+st.title(':red[인종차별]이 아닌, :red[인종분류]입니다.')
+st.subheader('인종 :red[~~차별~~]분류기 - Gemini')
 
 with st.sidebar :
     model = st.selectbox('모델 선택',
@@ -59,5 +60,6 @@ if uploaded_file:
 # -6) 결과 출력하기 : st.write / st.code
         st.header('이거지~')
         st.code(response)
+
 
 
